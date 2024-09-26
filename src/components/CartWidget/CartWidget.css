@@ -1,0 +1,8 @@
+.carrito {
+  background-color: white;
+    height: 30px;
+    text-align: end;
+  }
+.carrito img {
+    height: 100%;
+  }
