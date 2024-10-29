@@ -2,8 +2,10 @@ import imagenlogo from "../../assets/imagen-logo.png"
 import logo from "../../assets/logo.png"
 import "./Navbar.css"
 import CartWidget from "../CartWidget/CartWidget"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
+
     return (
         <header>
             <section className="imagen-logo">
@@ -15,18 +17,22 @@ const Navbar = () => {
             <nav className="navbar">
                 <div>
                     <ul className="barramenu-container">
+                     <li className="barramenu-container__lista"> 
+                            <Link to="/" className="barramenu-container__lista__a">Inicio</Link>
+                        </li>
                         <li className="barramenu-container__lista">
-                            <a className="barramenu-container__lista__a" href="">INICIO</a></li>
+                            <Link to="/category/pizzas" className="barramenu-container__lista__a">PIZZAS</Link>
+                            </li>
                         <li className="barramenu-container__lista">
-                            <a className="barramenu-container__lista__a" href="">QUIENES SOMOS</a></li>
+                            <Link to="/category/empanadas" className="barramenu-container__lista__a">EMPANADAS</Link>
+                            </li>
                         <li className="barramenu-container__lista">
-                            <a className="barramenu-container__lista__a" href="">DONDE ESTAMOS</a></li>
-                        <li className="barramenu-container__lista">
-                            <a className="barramenu-container__lista__a" href="">DEJANOS TU OPINION</a></li>
+                            <Link to="/quienes-somos"className="barramenu-container__lista__a">QUIENES SOMOS</Link></li>
                     </ul>
                 </div>
             </nav>
             <CartWidget />
+            
         </header>
     )
 }
