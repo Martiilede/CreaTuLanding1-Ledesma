@@ -1,0 +1,23 @@
+.vaciar-carrito{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+}
+.contenedor-boton {
+    text-align: center
+}
+.finalizar-compra{
+    text-align: center;
+    background-color: #4CAF50;
+    color: white; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 3em;
+    padding: 0.8em; 
+    width: 100%;
+    border-radius: 0.5rem; 
+    border: 1px solid #ccc; 
+}

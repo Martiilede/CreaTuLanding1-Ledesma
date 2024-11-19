@@ -1,0 +1,15 @@
+.footer__contenido {
+    text-align: center;
+  }
+  .footer__contenido__redes h5 {
+    font-size: 2em;
+  }
+.footer__logo__final {
+    text-align: center;
+    width: none;
+    height: 7em;
+  }
+  .footer__logo__final img {
+    width: none;
+    height: 100%;
+  }

@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from "react";
 import MiComponente from "../buttons.jsx";
 import loadingImage from "../../../assets/cargando-loading-048.gif"
+import { useContext} from "react";
+import { CartContext } from "../../cartContext/CartContext.jsx";
+
 
 const ItemDetailContainer = ({ isOpen, onClose, product }) => {
   const [loading, setLoading] = useState(true);
+ const {addProductsInCart} = useContext(CartContext)
+
+  const Addproducts = (cantidad) => {
+const productsCart = {...product, cantidad: cantidad}
+  addProductsInCart(productsCart)
+  }
 
   useEffect(() => {
     if (isOpen) {
@@ -31,8 +40,7 @@ const ItemDetailContainer = ({ isOpen, onClose, product }) => {
             <img src={product.imagen} alt={product.nombre} />
             <p>{product.parrafo}</p>
             <h6 style={{ fontSize: 20 }}>{product.category === "empanadas" ? `Precio Docena $${product.precio}` : `Precio $${product.precio}`}</h6>
-            <MiComponente />
-            <button className="agregar-carrito">Agregar al Carrito</button>
+            <MiComponente  Addproducts = {Addproducts}/>
           </>
         )}
       </div>
